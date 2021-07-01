@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/administracion"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clientes</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar showCancelButton="focus" placeholder="Buscar Cliente"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+
+
+    <ion-list>
+
+      <app-tarjeta-cliente *ngFor="let cli of cliente" [tarjetaCliente]= cli>
+
+      </app-tarjeta-cliente>
+
+    </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['nuevo']" color="success">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

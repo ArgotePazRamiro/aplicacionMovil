@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Administración</ion-card-subtitle>
+            <img [routerLink]="['administracion']" src="https://thumbs.dreamstime.com/z/icono-de-administraci%C3%B3n-trabajo-en-equipo-logotipo-signo-vector-equipos-stock-161011014.jpg" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Tiendas</ion-card-subtitle>
+            <img [routerLink]="['tienda']" src="https://raw.githubusercontent.com/belen15/Inventario/master/Logo.jpg" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Ventas</ion-card-subtitle>
+            <img [routerLink]="['venta']" src="https://png.pngtree.com/png-clipart/20190613/original/pngtree-shopping-bag-with-goods-retail-logo-design-template-vector-png-image_3555851.jpg" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Compras</ion-card-subtitle>
+            <img [routerLink]="['compra']" src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-vector-pink-supermarket-shopping-cart-logo-png-image_4282588.jpg" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

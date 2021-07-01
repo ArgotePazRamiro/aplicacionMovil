@@ -1,0 +1,22 @@
+<ion-item [routerLink]="['/cliente', tarjetaCliente.idCliente]">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-avatar slot="start">
+            <ion-img [src]="tarjetaCliente.imagenURL"></ion-img>
+
+          </ion-avatar>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <br>
+          <ion-label>{{tarjetaCliente.nombre}}</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-item>

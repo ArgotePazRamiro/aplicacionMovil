@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Administración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Clientes</ion-card-subtitle>
+            <img [routerLink]="['cliente']" src="https://www.togasybirretesmexico.com.mx/wp-content/uploads/2019/02/LOGO-CLIENTES.png" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Personal</ion-card-subtitle>
+            <img [routerLink]="['personal']" src="https://fhce.umsa.bo/wp-content/uploads/2020/03/IsoLogoTalentoHumano-01-768x768.png" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Lista de productos y Stock</ion-card-subtitle>
+            <img [routerLink]="['stock']" src="https://files.cdn.printful.com/o/upload/lpg-image-upload/b0/b02efe05cc51ace7511f322213fa7902" alt="">
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
