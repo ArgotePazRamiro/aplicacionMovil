@@ -81,6 +81,10 @@ const routes: Routes = [
     path: 'cart-modal',
     loadChildren: () => import('./pages/cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
   },
+  {
+    path: 'compra-modal',
+    loadChildren: () => import('./pages/compra-modal/compra-modal.module').then( m => m.CompraModalPageModule)
+  },
 
 
 ];

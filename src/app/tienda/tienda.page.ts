@@ -1,7 +1,7 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
 import * as L from 'leaflet';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tienda',
@@ -14,7 +14,9 @@ export class TiendaPage implements OnInit {
   center: L.PointTuple;
   tempIcon: any;
 
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) { }
+  constructor(public navCtrl: NavController,
+              public toastCtrl: ToastController,
+              private http: HttpClient) { }
 
   ngOnInit() {
 
@@ -53,6 +55,7 @@ export class TiendaPage implements OnInit {
 
     this.mensaje('Pulsada la coordenada: ' + e.latlng);
 
+
   }
 
   initMap() {
@@ -70,13 +73,13 @@ export class TiendaPage implements OnInit {
 
   }
 
-  mensaje(texto: string) {
+  async mensaje(texto) {
     const toast = this.toastCtrl.create({
       message: texto,
       position: 'bottom',
       duration: 3000
     });
-    toast.catch(this.mensaje);
+    (await toast).present();
   }
 
 }

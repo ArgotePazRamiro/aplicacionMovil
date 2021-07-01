@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { CartService, Product } from 'src/app/services/cart.service';
-import { HttpClient } from '@angular/common/http';
+import { CompraService, Product } from 'src/app/services/compra.service';
 
 @Component({
-  selector: 'app-cart-modal',
-  templateUrl: './cart-modal.page.html',
-  styleUrls: ['./cart-modal.page.scss'],
+  selector: 'app-compra-modal',
+  templateUrl: './compra-modal.page.html',
+  styleUrls: ['./compra-modal.page.scss'],
 })
-export class CartModalPage implements OnInit {
+export class CompraModalPage implements OnInit {
 
   cart: Product[] = [];
-  totalPago: [];
 
-  constructor(private cartService: CartService,
-              private modalCtrl: ModalController,
-              private http: HttpClient,) { }
+  constructor(private cartService: CompraService, private modalCtrl: ModalController) { }
 
   ngOnInit()
   {

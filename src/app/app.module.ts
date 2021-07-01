@@ -13,6 +13,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CartModalPageModule } from './pages/cart-modal/cart-modal.module';
+import { CompraModalPageModule } from './pages/compra-modal/compra-modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { CartModalPageModule } from './pages/cart-modal/cart-modal.module';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     CartModalPageModule,
+    CompraModalPageModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AngularFirestoreModule],
   bootstrap: [AppComponent],
