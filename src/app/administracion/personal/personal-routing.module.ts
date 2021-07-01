@@ -13,11 +13,11 @@ const routes: Routes = [
     loadChildren: () => import('./datos/datos.module').then( m => m.DatosPageModule)
   },
   {
-    path: 'vista',
+    path: 'vista-tarjeta',
     loadChildren: () => import('./tarjeta-personal/vista-tarjeta/vista-tarjeta.module').then( m => m.VistaTarjetaPageModule)
   },
   {
-    path: 'nuevo',
+    path: 'nueva-tarjeta',
     loadChildren: () => import('./tarjeta-personal/nueva-tarjeta/nueva-tarjeta.module').then( m => m.NuevaTarjetaPageModule)
   }
 ];

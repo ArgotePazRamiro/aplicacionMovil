@@ -85,6 +85,11 @@ const routes: Routes = [
     path: 'compra-modal',
     loadChildren: () => import('./pages/compra-modal/compra-modal.module').then( m => m.CompraModalPageModule)
   },
+  {
+    path: 'nueva-tarjeta',
+    loadChildren: () => import('./administracion/stock/tarjeta-stock/nueva-tarjeta/nueva-tarjeta.module').then(
+       m => m.NuevaTarjetaPageModule)
+  },
 
 
 ];
