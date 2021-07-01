@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ClientePage } from './cliente.page';
+import { PersonalPage } from './personal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ClientePage
+    component: PersonalPage
   },
   {
     path: 'datos',
@@ -14,17 +14,16 @@ const routes: Routes = [
   },
   {
     path: 'vista',
-    loadChildren: () => import('./tarjeta-cliente/vista-tarjeta/vista-tarjeta.module').then( m => m.VistaTarjetaPageModule)
+    loadChildren: () => import('./tarjeta-personal/vista-tarjeta/vista-tarjeta.module').then( m => m.VistaTarjetaPageModule)
   },
   {
     path: 'nuevo',
-    loadChildren: () => import('./tarjeta-cliente/nueva-tarjeta/nueva-tarjeta.module').then( m => m.NuevaTarjetaPageModule)
-  },
-
+    loadChildren: () => import('./tarjeta-personal/nueva-tarjeta/nueva-tarjeta.module').then( m => m.NuevaTarjetaPageModule)
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ClientePageRoutingModule {}
+export class PersonalPageRoutingModule {}

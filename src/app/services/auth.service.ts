@@ -39,6 +39,7 @@ export class AuthService {
 
   async googleLogin() {
     const credential = await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.router.navigateByUrl('/home');
     return this.updateUserData(credential.user);
   }
 
@@ -47,7 +48,7 @@ export class AuthService {
     this.afAuth.createUserWithEmailAndPassword(data.email, data.password)
      .then( data => {
       if (data.user.emailVerified) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       } else {
         data.user.sendEmailVerification().then(() => {
           alert('Porfavor Verifique su Correo');
